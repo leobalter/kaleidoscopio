@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Kaleidoscópio</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+  
+  #animationArea {
+    position: relative;
+  }
+  
+  #animationArea, #imagem1div ,img {
+    width: 460px; height: 460px;
+  }
+  
+  #imagem1div, #imagem2 {
+    display: block;
+    position: absolute;
+  }
+   
+  #imagem1 {
+    -moz-animation-duration: 7s;  
+    -moz-animation-name: rotacao;
+    -moz-animation-iteration-count: infinite;  
+    -moz-animation-timing-function: linear;    
+    
+    -webkit-animation-duration: 7s;  
+    -webkit-animation-name: rotacao;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  
+  @-moz-keyframes rotacao {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    
+    to {
+      -moz-transform: rotate(359.9deg);
+    }
+  }
+  
+  @-webkit-keyframes rotacao {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    
+    to {
+      -webkit-transform: rotate(359.9deg);
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="animationArea">
+    <div id="imagem1div">
+      <img id="imagem1" src="ks_color.png" >
+    </div>
+    <img id="imagem2" src="ks_shading.png">
+  </div>
+</body>
+</html>
